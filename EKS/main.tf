@@ -2,7 +2,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "jenkins-vpc"
+  name = "eks-vpc"
   cidr = var.vpc_cidr
 
   azs = data.aws_availability_zones.azs.names
@@ -41,14 +41,13 @@ module "eks" {
 
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
-
   eks_managed_node_groups = {
     nodes = {
       min_size     = 1
       max_size     = 3
       desired_size = 2
 
-      instance_type = ["t2.micro"]
+      instance_type = ["t2.medium"]
     }
   }
 
