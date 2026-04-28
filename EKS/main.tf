@@ -35,7 +35,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 21.0"
 
-  name                   = "dev-eks-cluster"
+  name                   = "my-eks-cluster"
   kubernetes_version     = "1.33"
   endpoint_public_access = true
 
@@ -48,7 +48,7 @@ module "eks" {
       max_size     = 3
       desired_size = 2
 
-      instance_type = ["t3.small"]
+      instance_type = ["t2.micro"]
     }
   }
 
