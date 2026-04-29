@@ -1,5 +1,3 @@
-# aws-eks-devops-pipeline-myProject
-
 ## Terraform + Jenkins + Amazon EKS CI/CD Deployment Project
 
 This project demonstrates a complete DevOps infrastructure automation and CI/CD pipeline setup using Terraform, Jenkins, Amazon EKS, and Kubernetes.
@@ -50,7 +48,7 @@ Developer → GitHub Repository → Jenkins Pipeline → Terraform Apply → AWS
 
 ## Project Structure:
 project-root/
-│
+|
 ├── Jenkins/
 │   ├── backend.tf
 │   ├── provider.tf
@@ -134,3 +132,56 @@ CI/CD ready Jenkins server
 Kubernetes scalable deployment
 Public LoadBalancer exposure
 Reusable Terraform modules
+
+
+### 1. Project Folder Structure
+<img width="297" height="698" alt="image" src="https://github.com/user-attachments/assets/fb1afd5b-48ce-4d14-8e46-8435ea7f5806" />
+
+### 2. Terraform Apply Success (Jenkins Infra)
+<img width="452" height="436" alt="image" src="https://github.com/user-attachments/assets/60b0fa21-adea-4b2d-94c4-693a023f23ff" />
+
+### 3. AWS Console – Jenkins EC2 Running
+<img width="452" height="219" alt="image" src="https://github.com/user-attachments/assets/f32e8366-0618-47cf-8c33-e99d51f63652" />
+
+### 4. Jenkins Login Page
+
+### 5. Jenkins Dashboard
+
+### 6. Jenkins Build Success
+
+### 7. AWS Console – VPC Created
+#### jenkins-vpc
+<img width="452" height="219" alt="image" src="https://github.com/user-attachments/assets/66dfc8f7-5f4b-49c8-8940-ec9bb495b895" />
+
+#### eks-vpc
+<img width="452" height="213" alt="image" src="https://github.com/user-attachments/assets/7e2d9c71-b13e-43ba-9b47-bec504e19d50" />
+
+
+### 8. AWS Console – EKS Cluster Active
+
+### 9. kubectl get nodes
+
+### 10. kubectl get pods
+
+### 11. kubectl get svc
+
+### 12.NGINX App Running in Browser
+
+### 13. Terraform State in S3 Bucket
+<img width="452" height="128" alt="image" src="https://github.com/user-attachments/assets/6ab6aea4-114e-4614-b8f0-df815e4ab4c4" />
+
+### 14. Security Group Rules
+<img width="452" height="212" alt="image" src="https://github.com/user-attachments/assets/4c3a0853-cc28-489a-bb6d-fddeac674aa3" />
+
+### 15. Jenkins Installed Tools
+<img width="452" height="202" alt="image" src="https://github.com/user-attachments/assets/d02dc4fa-2a20-47bb-8da5-7332185f678c" />
+
+
+
+
+
+
+
+
+
+
