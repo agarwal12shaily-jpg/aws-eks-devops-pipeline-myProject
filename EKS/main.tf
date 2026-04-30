@@ -1,8 +1,8 @@
-
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  source  = "terraform-aws-modules/vpc/aws"
+  version = "~> 5.0"
 
-  name = "eks-vpc"
+  name = "jenkins-vpc"
   cidr = var.vpc_cidr
 
   azs = data.aws_availability_zones.azs.names
@@ -11,8 +11,10 @@ module "vpc" {
   public_subnets  = var.public_subnets
 
   enable_dns_hostnames = true
-  enable_nat_gateway   = true
-  single_nat_gateway   = true
+  enable_dns_support   = true
+
+  enable_nat_gateway = true
+  single_nat_gateway = true
 
   tags = {
     "kubernetes.io/cluster/my-eks-cluster" = "shared"
@@ -20,34 +22,41 @@ module "vpc" {
 
   public_subnet_tags = {
     "kubernetes.io/cluster/my-eks-cluster" = "shared"
-    "kubernetes.io/role/elb"               = 1
+    "kubernetes.io/role/elb"              = "1"
   }
 
   private_subnet_tags = {
     "kubernetes.io/cluster/my-eks-cluster" = "shared"
-    "kubernetes.io/role/internal-elb"      = 1
+    "kubernetes.io/role/internal-elb"      = "1"
   }
-
 }
 
 module "eks" {
-
   source  = "terraform-aws-modules/eks/aws"
-  version = "~> 21.0"
+  version = "~> 20.31"
 
-  name                   = "my-eks-cluster"
-  kubernetes_version     = "1.33"
-  endpoint_public_access = true
+  cluster_name    = "my-eks-cluster"
+  cluster_version = "1.31"
+
+  cluster_endpoint_public_access = true
+
+  enable_cluster_creator_admin_permissions = true
 
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
+
   eks_managed_node_groups = {
     nodes = {
       min_size     = 1
-      max_size     = 1
+      max_size     = 2
       desired_size = 1
 
       instance_types = ["t3.micro"]
+      ami_type       = "AL2_x86_64"
+
+      capacity_type = "ON_DEMAND"
+
+      disk_size = 20
     }
   }
 
