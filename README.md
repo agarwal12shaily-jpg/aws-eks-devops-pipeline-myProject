@@ -138,47 +138,39 @@ Reusable Terraform modules
 <img width="297" height="698" alt="image" src="https://github.com/user-attachments/assets/fb1afd5b-48ce-4d14-8e46-8435ea7f5806" />
 
 ### 2. Terraform Apply Success (Jenkins Infra)
-<img width="452" height="436" alt="image" src="https://github.com/user-attachments/assets/60b0fa21-adea-4b2d-94c4-693a023f23ff" />
+<img width="452" height="473" alt="image" src="https://github.com/user-attachments/assets/236f6412-9bfb-46b2-8ea6-f9d2e2ec33ea" />
 
 ### 3. AWS Console – Jenkins EC2 Running
-<img width="452" height="219" alt="image" src="https://github.com/user-attachments/assets/f32e8366-0618-47cf-8c33-e99d51f63652" />
+<img width="452" height="220" alt="image" src="https://github.com/user-attachments/assets/ac2891af-271c-4486-b201-7d8ee3ba4dec" />
 
 ### 4. Jenkins Login Page
+<img width="452" height="279" alt="image" src="https://github.com/user-attachments/assets/fe6c7ace-166b-4279-8478-ecc62693b55f" />
 
 ### 5. Jenkins Dashboard
+<img width="452" height="144" alt="image" src="https://github.com/user-attachments/assets/62577c4f-5d51-4611-b41d-2188e44df8a1" />
 
 ### 6. Jenkins Build Success
+<img width="452" height="194" alt="image" src="https://github.com/user-attachments/assets/6337abd1-2035-45d4-ad4d-5f4fa56e3c8a" />
 
 ### 7. AWS Console – VPC Created
 #### jenkins-vpc
-<img width="452" height="219" alt="image" src="https://github.com/user-attachments/assets/66dfc8f7-5f4b-49c8-8940-ec9bb495b895" />
+<img width="452" height="226" alt="image" src="https://github.com/user-attachments/assets/02b16c52-8ecb-42dc-b174-20d3ede952f3" />
 
 #### eks-vpc
-<img width="452" height="213" alt="image" src="https://github.com/user-attachments/assets/7e2d9c71-b13e-43ba-9b47-bec504e19d50" />
-
+<img width="452" height="224" alt="image" src="https://github.com/user-attachments/assets/adcb5cba-5a00-4c51-bef8-9814beea7065" />
 
 ### 8. AWS Console – EKS Cluster Active
+<img width="452" height="213" alt="image" src="https://github.com/user-attachments/assets/e7fa936c-5362-4ec1-8687-eab208a25726" />
 
-### 9. kubectl get nodes
-
-### 10. kubectl get pods
-
-### 11. kubectl get svc
-
-### 12.NGINX App Running in Browser
+### 9. kubectl get nodes, kubectl get pods, kubectl get svc
+<img width="452" height="182" alt="image" src="https://github.com/user-attachments/assets/c13ed594-a4f3-4af1-996e-0460ac4e16b3" />
 
 ### 13. Terraform State in S3 Bucket
-<img width="452" height="128" alt="image" src="https://github.com/user-attachments/assets/6ab6aea4-114e-4614-b8f0-df815e4ab4c4" />
+<img width="452" height="166" alt="image" src="https://github.com/user-attachments/assets/9c2493fd-a4ab-4f00-bef7-c2e3e8b72c88" />
 
 ### 14. Security Group Rules
-<img width="452" height="212" alt="image" src="https://github.com/user-attachments/assets/4c3a0853-cc28-489a-bb6d-fddeac674aa3" />
-
-### 15. Jenkins Installed Tools
-<img width="452" height="202" alt="image" src="https://github.com/user-attachments/assets/d02dc4fa-2a20-47bb-8da5-7332185f678c" />
-
-
-
-
+<img width="452" height="220" alt="image" src="https://github.com/user-attachments/assets/db481124-7715-45a5-9ce0-92ac17ed4237" />
+<img width="452" height="239" alt="image" src="https://github.com/user-attachments/assets/0dc1ff15-900b-4020-bb89-2de18b2b9178" />
 
 
 
