@@ -2,14 +2,14 @@ pipeline {
     agent any
     environment {
         AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
-        AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
+        AWS_SECRET_ACCESS_KEY = credentials('AWS_SEECRET_ACCESS_KEY')
         AWS_DEFAULT_REGION = "us-east-1"
     }
     stages {
         stage('Checkout SCM'){
             steps{
                 script{
-                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/gauri17-pro/terraform-jenkins-eks.git']])
+                    git branch: 'main', url: 'https://github.com/agarwal12shaily-jpg/aws-eks-devops-pipeline-myProject.git'
                 }
             }
         }
@@ -68,6 +68,17 @@ pipeline {
                         sh 'kubectl apply -f service.yaml'
                     }
                 }
+            }
+        }
+        stage('Debug Cluster') {
+            steps {
+                sh '''
+                aws sts get-caller-identity
+                kubectl get nodes
+                kubectl get pods
+                kubectl get svc
+                kubectl get endpoints
+                '''
             }
         }
     }
